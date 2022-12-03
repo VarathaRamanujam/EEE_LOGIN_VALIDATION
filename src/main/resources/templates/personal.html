@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Personal Page</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<center>
+<h1>WELCOME TO YOUR PAGE  </h1>
+<h2>REGISTER NUMBER :<span th:text="${RegisterNumber}"></span></h2>
+<h2>NAME :<span th:text="${Name}"></span></h2>
+<h2>PHONE NUMBER :<span th:text="${PhoneNumber}"></span></h2>
+<a href="/login">LogIn</a>
+<a href="/register">Register</a>
+
+<form method="post" action="/upload" enctype="multipart/form-data">
+<input type="file" name="file"> <br>
+
+<button type="submit">Upload</button>
+</form>
+</center>
+</body>
+</html>
